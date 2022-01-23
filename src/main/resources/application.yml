@@ -12,7 +12,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: none # update: ?? Model ???????
+      ddl-auto: update # update: ?? Model ???????
     show-sql: true
 
   servlet:

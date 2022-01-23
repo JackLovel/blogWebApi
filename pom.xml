@@ -11,7 +11,8 @@
 	<groupId>com.example</groupId>
 	<artifactId>blogApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>blogApi</name>
+    <packaging>jar</packaging>
+    <name>blogApi</name>
 	<description>博客后端 api</description>
 	<properties>
 		<java.version>1.8</java.version>
