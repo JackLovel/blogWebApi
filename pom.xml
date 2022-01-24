@@ -10,8 +10,8 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>blogApi</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+	<version>1.0</version>
+    <packaging>war</packaging>
     <name>blogApi</name>
 	<description>博客后端 api</description>
 	<properties>
@@ -25,9 +25,20 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
-		<dependency>
+        <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
@@ -42,9 +53,18 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>7.0.42</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
 	<build>
+<!--        打包的名称-->
+        <finalName>boot-launch</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
