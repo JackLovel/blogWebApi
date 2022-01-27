@@ -1,4 +1,4 @@
-package com.example.blogApi.entity;
+package com.example.blogApiz.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

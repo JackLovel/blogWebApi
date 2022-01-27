@@ -1,4 +1,4 @@
-package com.example.blogApi.repo;
+package com.example.blogApiz.repo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

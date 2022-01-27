@@ -1,8 +1,8 @@
-package com.example.blogApi.controller;
+package com.example.blogApiz.controller;
 
-import com.example.blogApi.entity.Person;
-import com.example.blogApi.exception.ResourceNotFoundException;
-import com.example.blogApi.repo.PersonRepo;
+import com.example.blogApiz.entity.Person;
+import com.example.blogApiz.exception.ResourceNotFoundException;
+import com.example.blogApiz.repo.PersonRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

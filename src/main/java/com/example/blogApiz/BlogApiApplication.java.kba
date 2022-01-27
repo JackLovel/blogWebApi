@@ -10,15 +10,15 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class BlogApiApplication  extends SpringBootServletInitializer {
+public class com.example.blogApi.controller.BlogApiApplication  extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
-		SpringApplication.run(BlogApiApplication.class, args);
+		SpringApplication.run(com.example.blogApi.controller.BlogApiApplication.class, args);
 	}
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(BlogApiApplication.class);
+        return builder.sources(com.example.blogApi.controller.BlogApiApplication.class);
     }
 
 //    @Autowired
