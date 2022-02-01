@@ -1,16 +1,23 @@
 package com.example.blogApiz.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@AllArgsConstructor
+import static javax.persistence.GenerationType.AUTO;
+
+@Setter
+@Getter
 @NoArgsConstructor
-@Data
+@AllArgsConstructor
 @Entity
+@Table(name="role")
 public class Role {
-    private long id;
+    @Id
+    @GeneratedValue(strategy = AUTO)
+    private Long id;
     private String name;
 }
