@@ -3,21 +3,28 @@ services:
   springboot-app:
     container_name: "springbooot-app"
     restart: always
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
     ports:
-      - 8080:90
+      - "8080:90"
+    depends_on:
+      - db
     environment:
       MYSQL_HOST: localhost
       MYSQL_USER: root
       MYSQL_PASSWORD: 123123123
       MYSQL_PORT: 3306
-  mysqldb:
+
+  db:
     container_name: mysqldb
     image: mysql
     volumes:
       -  ./db:/var/lib/mysql
     ports:
-      - 3306:3306
+      - "3306:3306"
     environment:
       MYSQL_DATABASE: cms
       MYSQL_ROOT_PASSWORD: 123123123
